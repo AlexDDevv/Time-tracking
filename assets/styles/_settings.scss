@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+@mixin space {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+$vdBlue: hsl(226, 43%, 10%);
+$dBlue: hsl(235, 46%, 20%);
+$desaBlue: hsl(235, 45%, 61%);
+$paleBlue: hsl(236, 100%, 87%);
+$blue: hsl(246, 80%, 60%);
+
+$bgWork: hsl(15, 100%, 70%);
+$bgPlay: hsl(195, 74%, 62%);
+$bgStudy: hsl(348, 100%, 68%);
+$bgExercise: hsl(145, 58%, 55%);
+$bgSocial: hsl(264, 64%, 52%);
+$bgSelfcare: hsl(43, 84%, 65%);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Rubik', sans-serif;
+    background: $vdBlue;
+    @include center;
+    flex-direction: column;
+    gap: 50px;
+    height: 100vh;
+}
+@media screen and (max-width: 450px) {
+    
+    body {
+        height: 150vh;
+        padding: 50px 0;
+    }
+}

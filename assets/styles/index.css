@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background: hsl(226, 43%, 10%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  height: 100vh;
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    height: 150vh;
+    padding: 50px 0;
+  }
+}
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 350px;
+}
+@media screen and (max-width: 850px) {
+  .flex-container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 670px) {
+  .flex-container {
+    flex-direction: column;
+    height: 80%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .flex-container {
+    height: 100%;
+    width: 80%;
+  }
+}
+.flex-container .jeremy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 180px;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+@media screen and (max-width: 850px) {
+  .flex-container .jeremy {
+    width: 24%;
+  }
+}
+@media screen and (max-width: 670px) {
+  .flex-container .jeremy {
+    width: 100%;
+    height: 33%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .flex-container .jeremy {
+    height: 30%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .flex-container .jeremy {
+    height: 16%;
+  }
+}
+.flex-container .jeremy::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: hsl(235, 46%, 20%);
+  z-index: -1;
+}
+.flex-container .jeremy .profil {
+  background: hsl(246, 80%, 60%);
+  padding: 25px 20px 0 20px;
+  height: 68%;
+  border-radius: 10px;
+}
+@media screen and (max-width: 670px) {
+  .flex-container .jeremy .profil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65%;
+    width: 100%;
+    gap: 15px;
+    padding: 0 20px;
+  }
+}
+.flex-container .jeremy .profil .avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50px;
+  border: 2px solid white;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 670px) {
+  .flex-container .jeremy .profil .avatar {
+    margin-bottom: 0;
+    width: 60px;
+    height: 60px;
+  }
+}
+.flex-container .jeremy .profil .avatar img {
+  width: 100%;
+}
+.flex-container .jeremy .profil .name span {
+  color: hsl(236, 100%, 87%);
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+@media screen and (max-width: 670px) {
+  .flex-container .jeremy .profil .name span {
+    font-size: 0.8rem;
+  }
+}
+.flex-container .jeremy .profil .name h1 {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+@media screen and (max-width: 670px) {
+  .flex-container .jeremy .profil .name h1 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .flex-container .jeremy .profil .name h1 {
+    font-size: 1.2rem;
+  }
+}
+.flex-container .jeremy .period {
+  background: hsl(235, 46%, 20%);
+  width: 100%;
+  height: 32%;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width: 670px) {
+  .flex-container .jeremy .period {
+    height: 35%;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.flex-container .jeremy .period p {
+  color: hsl(235, 45%, 61%);
+  font-size: 0.8rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+@media screen and (max-width: 670px) {
+  .flex-container .jeremy .period p {
+    font-size: 1rem;
+  }
+}
+.flex-container .jeremy .period p:hover {
+  color: white;
+}
+.flex-container .jeremy .period .active {
+  color: white;
+}
+.flex-container .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 180px);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  height: 100%;
+  grid-auto-flow: dense;
+}
+@media screen and (max-width: 850px) {
+  .flex-container .grid-container {
+    width: 76%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 670px) {
+  .flex-container .grid-container {
+    width: 100%;
+    height: 67%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .flex-container .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 70%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .flex-container .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    height: 84%;
+  }
+}
+.flex-container .grid-container .activity-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.flex-container .grid-container .activity-container .logo {
+  height: 25%;
+  background-repeat: no-repeat;
+  background-position: 90%;
+  background-size: 30%;
+  border-radius: 10px 10px 0 0;
+}
+@media screen and (max-width: 500px) {
+  .flex-container .grid-container .activity-container .logo {
+    height: 40%;
+  }
+}
+.flex-container .grid-container .activity-container .work-image {
+  background-color: hsl(15, 100%, 70%);
+  background-image: url(../images/icon-work.svg);
+}
+.flex-container .grid-container .activity-container .play-image {
+  background-color: hsl(195, 74%, 62%);
+  background-image: url(../images/icon-play.svg);
+}
+.flex-container .grid-container .activity-container .study-image {
+  background-color: hsl(348, 100%, 68%);
+  background-image: url(../images/icon-study.svg);
+}
+.flex-container .grid-container .activity-container .exercise-image {
+  background-color: hsl(145, 58%, 55%);
+  background-image: url(../images/icon-exercise.svg);
+}
+.flex-container .grid-container .activity-container .social-image {
+  background-color: hsl(264, 64%, 52%);
+  background-image: url(../images/icon-social.svg);
+}
+.flex-container .grid-container .activity-container .selfcare-image {
+  background-color: hsl(43, 84%, 65%);
+  background-image: url(../images/icon-self-care.svg);
+  background-position: 90% bottom;
+  background-size: 27%;
+}
+.flex-container .grid-container .activity-container .items {
+  background: hsl(235, 46%, 20%);
+  color: white;
+  height: 80%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: -10px;
+  padding: 20px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+@media screen and (max-width: 670px) {
+  .flex-container .grid-container .activity-container .items {
+    padding: 23px 20px 20px 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .flex-container .grid-container .activity-container .items {
+    height: 90%;
+  }
+}
+.flex-container .grid-container .activity-container .items:hover {
+  background: #34397b;
+}
+.flex-container .grid-container .activity-container .items .activity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 500px) {
+  .flex-container .grid-container .activity-container .items .activity {
+    margin-bottom: 5px;
+  }
+}
+.flex-container .grid-container .activity-container .items .activity h2 {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.flex-container .grid-container .activity-container .items .activity .ellipsis {
+  width: 15px;
+}
+.flex-container .grid-container .activity-container .items .activity .ellipsis:hover {
+  filter: brightness(2);
+}
+@media screen and (max-width: 500px) {
+  .flex-container .grid-container .activity-container .items .contents {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+.flex-container .grid-container .activity-container .items .contents h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+@media screen and (max-width: 500px) {
+  .flex-container .grid-container .activity-container .items .contents h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  .flex-container .grid-container .activity-container .items .contents h3 {
+    font-size: 1.5rem;
+  }
+}
+.flex-container .grid-container .activity-container .items .contents p {
+  color: hsl(236, 100%, 87%);
+  font-size: 0.6rem;
+}
+@media screen and (max-width: 450px) {
+  .flex-container .grid-container .activity-container .items .contents p {
+    font-size: 0.8rem;
+  }
+}
+
+.attribution {
+  color: rgba(255, 255, 255, 0.9);
+}
+.attribution a {
+  color: hsl(235, 45%, 61%);
+  text-decoration: none;
+}
+@media screen and (max-width: 450px) {
+  .attribution {
+    font-size: 0.75rem;
+  }
+}/*# sourceMappingURL=index.css.map */

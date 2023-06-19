@@ -1,0 +1,304 @@
+.flex-container {
+    @include center;
+    gap: 20px;
+    height: 350px;
+
+    @media screen and (max-width: 850px) {
+        width: 90%;
+    }
+    @media screen and (max-width: 670px) {
+        flex-direction: column;
+        height: 80%;
+    }
+    @media screen and (max-width: 450px) {
+        height: 100%;
+        width: 80%;         
+    }
+
+    .jeremy {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 180px;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+        position: relative;
+
+        @media screen and (max-width: 850px) {
+            width: 24%;
+        }
+        @media screen and (max-width: 670px) {
+            width: 100%;
+            height: 33%;
+        }
+        @media screen and (max-width: 500px) {
+            height: 30%;     
+        }
+        @media screen and (max-width: 450px) {
+            height: 16%;       
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            background-color: $dBlue;
+            z-index: -1;
+        }
+
+        .profil {
+            background: $blue;
+            padding: 25px 20px 0 20px;
+            height: 68%;
+            border-radius: 10px;
+
+            @media screen and (max-width: 670px) {
+                @include center;
+                height: 65%;
+                width: 100%;
+                gap: 15px;
+                padding: 0 20px;
+            }
+
+            .avatar {
+                width: 55px;
+                height: 55px;
+                border-radius: 50px;
+                border: 2px solid white;
+                margin-bottom: 25px;
+
+                @media screen and (max-width: 670px) {
+                    margin-bottom: 0;
+                    width: 60px;
+                    height: 60px;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+            .name {
+
+                span {
+                    color: $paleBlue;
+                    font-size: 0.7rem;
+                    font-weight: 400;
+
+                    @media screen and (max-width: 670px) {
+                        font-size: 0.8rem;
+                    }
+                }
+                h1 {
+                    color: rgba(255, 255, 255, 0.9);
+                    font-size: 1.8rem;
+                    font-weight: 300;
+
+                    @media screen and (max-width: 670px) {
+                        font-size: 1.5rem;
+                    }
+                    @media screen and (max-width: 450px) {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+        .period {
+            background: $dBlue;
+            width: 100%;
+            height: 32%;
+            padding: 20px 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+
+            @media screen and (max-width: 670px) {
+                height: 35%;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            p {
+                color: $desaBlue;
+                font-size: 0.8rem;
+                font-weight: 400;
+                cursor: pointer;
+
+                @media screen and (max-width: 670px) {
+                    font-size: 1rem;
+                }
+                &:hover {
+                    color: white;
+                }
+            }
+            .active {
+                color: white;
+            }
+        }
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 180px);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+        height: 100%;
+        grid-auto-flow: dense;
+
+        @media screen and (max-width: 850px) {
+            width: 76%;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media screen and (max-width: 670px) {
+            width: 100%;
+            height: 67%;
+        }
+        @media screen and (max-width: 500px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            height: 70%;
+        }
+        @media screen and (max-width: 450px) {
+            grid-template-columns: 1fr;   
+            grid-template-rows: repeat(6, 1fr);
+            height: 84%;
+        }
+
+        .activity-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+
+            .logo {
+                height: 25%;
+                background-repeat: no-repeat;
+                background-position: 90%;
+                background-size: 30%;
+                border-radius: 10px 10px 0 0;
+
+                @media screen and (max-width: 500px) {
+                    height: 40%;   
+                }
+            }
+            .work-image {
+                background-color: $bgWork;
+                background-image: url(../images/icon-work.svg);
+            }
+            .play-image {
+                background-color: $bgPlay;
+                background-image: url(../images/icon-play.svg);
+            }
+            .study-image {
+                background-color: $bgStudy;
+                background-image: url(../images/icon-study.svg);
+            }
+            .exercise-image {
+                background-color: $bgExercise;
+                background-image: url(../images/icon-exercise.svg);
+            }
+            .social-image {
+                background-color: $bgSocial;
+                background-image: url(../images/icon-social.svg);
+            }
+            .selfcare-image {
+                background-color: $bgSelfcare;
+                background-image: url(../images/icon-self-care.svg);
+                background-position: 90% bottom;
+                background-size: 27%;
+            }
+            .items {
+                background: $dBlue;
+                color: white;
+                height: 80%;
+                border-radius: 10px;
+                overflow: hidden;
+                margin-top: -10px;
+                padding: 20px;
+                transition: 0.2s;
+                cursor: pointer;
+
+                @media screen and (max-width: 670px) {
+                    padding: 23px 20px 20px 20px; 
+                }
+                @media screen and (max-width: 500px) {
+                    height: 90%;   
+                }
+
+                &:hover {
+                    background: #34397b;
+                }
+
+                .activity {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+
+                    @media screen and (max-width: 500px) {
+                        margin-bottom: 5px;
+                    }
+
+                    h2 {
+                        font-size: 0.8rem;
+                        font-weight: 400;
+                    }
+                    .ellipsis {
+                        width: 15px;
+                        
+                        &:hover {
+                            filter: brightness(2);
+                        }
+                    }
+                }
+                .contents {
+
+                    @media screen and (max-width: 500px) {
+                        display: flex;
+                        align-items: baseline;
+                        justify-content: space-between;
+                    }
+
+                    h3 {
+                        font-size: 2rem;
+                        font-weight: 300;
+                        letter-spacing: 1px;
+                        margin-bottom: 8px;
+
+                        @media screen and (max-width: 500px) {
+                            font-size: 1.2rem;
+                            margin-bottom: 0;
+                        }
+                        @media screen and (max-width: 450px) {
+                            font-size: 1.5rem;
+                        }
+                    }
+                    p {
+                        color: $paleBlue;
+                        font-size: 0.6rem;
+
+                        @media screen and (max-width: 450px) {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.attribution {
+    color: rgba(255, 255, 255, 0.9);
+
+    a {
+        color: $desaBlue;
+        text-decoration: none;
+    }
+    @media screen and (max-width: 450px) {
+        font-size: 0.75rem;
+    }
+}
